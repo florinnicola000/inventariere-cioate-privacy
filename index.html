@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Politica de confidențialitate – Inventariere Cioate</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+           margin: 0; padding: 0; background: #f9fafb; color: #111; line-height: 1.6; }
+    header { background: #2563eb; color: white; padding: 1.5rem; text-align: center; }
+    header h1 { margin: 0; font-size: 1.8rem; }
+    nav { margin-top: 1rem; }
+    nav button { margin: 0 .25rem; padding: .4rem .8rem; border: none; border-radius: 6px; cursor: pointer; }
+    nav button.active { background: white; color: #2563eb; font-weight: bold; }
+    main { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
+    section { display: none; }
+    section.active { display: block; }
+    h2 { margin-top: 1.5rem; font-size: 1.2rem; }
+    footer { margin-top: 3rem; text-align: center; font-size: .9rem; color: #555;
+             padding: 1rem; border-top: 1px solid #ddd; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Inventariere Cioate – Privacy Policy</h1>
+    <nav>
+      <button id="btn-ro" class="active" onclick="setLang('ro')">Română</button>
+      <button id="btn-en" onclick="setLang('en')">English</button>
+    </nav>
+  </header>
+  <main>
+    <section id="ro" class="active">
+      <h2>Politica de confidențialitate</h2>
+      <p>Aplicația „Inventariere Cioate” este destinată inventarierii cioatelor. Respectăm confidențialitatea utilizatorilor: nu colectăm, nu transmitem și nu stocăm date personale pe servere externe. Toate informațiile rămân exclusiv pe dispozitivul utilizatorului.</p>
+      <h2>Date accesate</h2>
+      <ul>
+        <li><strong>Camera</strong> – folosită numai pentru fotografierea cioatelor. Fotografiile sunt salvate local, nu sunt transmise.</li>
+        <li><strong>Locația</strong> – opțional, pentru a salva coordonatele GPS ale cioatelor. Coordonatele sunt stocate local și nu sunt transmise.</li>
+        <li><strong>Date introduse manual</strong> (UA, specie, diametre etc.) – păstrate local în baza de date a aplicației.</li>
+      </ul>
+      <h2>Transfer de date</h2>
+      <p>Nu există transfer de date către servere, terți sau către dezvoltator. Aplicația funcționează complet offline.</p>
+      <h2>Drepturi utilizator</h2>
+      <p>Poți șterge oricând datele salvate direct din aplicație. Pentru întrebări: <a href="mailto:nicolaflorin00@icloud.com">nicolaflorin00@icloud.com</a>.</p>
+    </section>
+    <section id="en">
+      <h2>Privacy Policy</h2>
+      <p>The “Inventariere Cioate” app is used to record tree stumps. We respect your privacy: we do not collect, transmit, or store personal data on external servers. All information stays on your device.</p>
+      <h2>Data Access</h2>
+      <ul>
+        <li><strong>Camera</strong> – used only to take photos of stumps. Photos are stored locally in the app and not shared.</li>
+        <li><strong>Location</strong> – optional, to save GPS coordinates of stumps. Coordinates are stored locally and not transmitted.</li>
+        <li><strong>User-entered data</strong> (UA, species, diameters etc.) – stored locally in the app database.</li>
+      </ul>
+      <h2>Data Transfer</h2>
+      <p>There is no transfer of data to servers, third parties, or the developer. The app works fully offline.</p>
+      <h2>User Rights</h2>
+      <p>You can delete saved data at any time directly in the app. For questions: <a href="mailto:nicolaflorin00@icloud.com">nicolaflorin00@icloud.com</a>.</p>
+    </section>
+  </main>
+  <footer>
+    <p>© <span id="year"></span> Inventariere Cioate. All rights reserved.</p>
+  </footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    function setLang(lang) {
+      document.getElementById("ro").classList.remove("active");
+      document.getElementById("en").classList.remove("active");
+      document.getElementById("btn-ro").classList.remove("active");
+      document.getElementById("btn-en").classList.remove("active");
+      if(lang === "ro") {
+        document.getElementById("ro").classList.add("active");
+        document.getElementById("btn-ro").classList.add("active");
+      } else {
+        document.getElementById("en").classList.add("active");
+        document.getElementById("btn-en").classList.add("active");
+      }
+    }
+  </script>
+</body>
+</html>
